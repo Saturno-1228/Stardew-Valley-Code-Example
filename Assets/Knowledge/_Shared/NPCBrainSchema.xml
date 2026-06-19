@@ -9,66 +9,70 @@
   <NPCBrain>
     <!-- Core Identity: Who this NPC is in the Stardew Valley world -->
     <Identity>
-      <Module id="..." tags="..." priority="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </Identity>
 
     <!-- Psychology: Core drives, beliefs, and emotional triggers -->
     <Psychology>
-      <Module id="..." tags="..." priority="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </Psychology>
 
-    <!-- Voice Profile: How they speak, vocabulary, rhythm, tone -->
+    <!-- Voice Profile: How they speak, vocabulary, rhythm, tone, generative patterns -->
     <VoiceProfile>
-      <Module id="..." tags="..." priority="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </VoiceProfile>
 
-    <!-- Character Arc: How the NPC changes according to heart levels and relationship stages -->
+    <!-- Character Arc: How the NPC's dialogue patterns change according to heart levels -->
     <CharacterArc>
-      <Module id="hearts_0_1" minHearts="0" maxHearts="1" priority="... ">...</Module>
-      <Module id="hearts_2_4" minHearts="2" maxHearts="4" priority="... ">...</Module>
-      <Module id="hearts_5_6" minHearts="5" maxHearts="6" priority="... ">...</Module>
-      <Module id="hearts_7_8" minHearts="7" maxHearts="8" priority="... ">...</Module>
-      <Module id="hearts_10" minHearts="10" maxHearts="10" priority="... ">...</Module>
-      <Module id="dating" conditions="isDating" priority="... ">...</Module>
-      <Module id="married" conditions="isMarried" priority="... ">...</Module>
-      <Module id="divorced" conditions="isDivorced" priority="... ">...</Module>
+      <Module id="hearts_0_1" minHearts="0" maxHearts="1" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="hearts_2_4" minHearts="2" maxHearts="4" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="hearts_5_6" minHearts="5" maxHearts="6" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="hearts_7_8" minHearts="7" maxHearts="8" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="hearts_10" minHearts="10" maxHearts="10" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="dating" conditions="isDating" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="married" conditions="isMarried" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      <Module id="divorced" conditions="isDivorced" intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </CharacterArc>
 
     <!-- Canon Knowledge: Facts, locations, and lore they know. Also what they DON'T know. -->
     <CanonKnowledge>
-      <Module id="..." tags="...">...</Module>
-      <!-- Blindspots are for secrets the NPC should not know about -->
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
       <BlindSpot subject="...">...</BlindSpot>
     </CanonKnowledge>
 
     <!-- Relationships: Thoughts, feelings, and dynamics with other specific NPCs -->
     <Relationships>
-      <Module id="..." tags="..." priority="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </Relationships>
 
     <!-- Dialogue Examples: Small snippets of canonical dialogue style to guide the LLM -->
     <DialogueExamples>
-      <Module id="..." tags="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </DialogueExamples>
 
     <!-- Refusal Style: How the NPC says no while staying in character -->
     <RefusalStyle>
-      <Module id="..." tags="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </RefusalStyle>
 
     <!-- Romance Style: How the NPC expresses romantic interest -->
     <RomanceStyle>
-      <Module id="..." tags="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </RomanceStyle>
 
     <!-- Conflict Style: How the NPC responds to insults, pressure, or disagreement -->
     <ConflictStyle>
-      <Module id="..." tags="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </ConflictStyle>
 
-    <!-- Capabilities: Actions the NPC can technically perform (if supported by the engine) -->
+    <!-- Capabilities: Separated between narrative topics and executable mod actions -->
     <Capabilities>
-      <Module id="..." tags="...">...</Module>
+      <NarrativeCapabilities>
+        <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      </NarrativeCapabilities>
+      <ExecutableCapabilities>
+        <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
+      </ExecutableCapabilities>
     </Capabilities>
 
     <!-- Certainty System: Enforces distinction between confirmed facts, observations, and rumors -->
@@ -83,7 +87,7 @@
 
     <!-- Anti Manipulation Defense: How to block jailbreaks or player gaslighting -->
     <AntiManipulationDefense>
-      <Module id="..." tags="...">...</Module>
+      <Module id="..." tags="..." intents="..." priority="..." tokenWeight="..." certainty="..." source="...">...</Module>
     </AntiManipulationDefense>
   </NPCBrain>
 </NPCBrainSchema>
